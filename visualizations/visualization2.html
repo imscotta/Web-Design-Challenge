@@ -10,6 +10,14 @@
           #plot {
             margin: 50px;
           }
+          #sidebar {
+              margin: 50px;
+              /* width: 300px; */
+              display: block;
+              position: fixed;
+              width:25%;
+              right:0
+          }
         </style>
       </head>
     <body>
@@ -22,7 +30,7 @@
           <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
               <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="#">Home</a>
+                <a class="nav-link" aria-current="page" href="landing-page.html">Home</a>
               </li>
               <li class="nav-item">
                 <a class="nav-link" href="comparisons.html">Comparisons</a>
@@ -36,7 +44,7 @@
                 </a>
                 <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
                   <li><a class="dropdown-item" href="visualization1.html">Cloudliness and Latitude</a></li>
-                  <li><a class="dropdown-item" href="visualization2.html">Humidity and Latitude</a></li>
+                  <li><a class="dropdown-item active" href="visualization2.html">Humidity and Latitude</a></li>
                   <li><a class="dropdown-item" href="visualization3.html">Temperature and Latitude</a></li>
                   <li><a class="dropdown-item" href="visualization4.html">Wind Speed and Latitude</a></li>
                 </ul>
@@ -45,22 +53,32 @@
           </div>
         </div>
       </nav>
-          <div id="main">
-            <div id="plot">
+          <div id="container">
+            <div class="row">
 
-              <!-- A descriptive title and heading tag.
-  
-              The plot or visualization for the selected comparison (latitude vs: max temperature, humidity, cloudiness, or wind speed). The images displayed on these pages should be stored in the assets/images folder.
-              
-              A paragraph describing the plot and its significance. -->
-  
-  
-                <h1>Humidity vs. Temperature Plot</h1>
-                <img src="../assets/images/humidity_latitude.png">
-              <p>
-                  This plot shows the data from cities weather and location. The observable trend is that most citites have higher than 50% humidity. Latitude does not appear to impact this.
-              </p>
-            </div>
+              <div class="col-xs-12 col-sm-8 col-8" id="plot">
+
+                <!-- A descriptive title and heading tag.
+    
+                The plot or visualization for the selected comparison (latitude vs: max temperature, humidity, cloudiness, or wind speed). The images displayed on these pages should be stored in the assets/images folder.
+                
+                A paragraph describing the plot and its significance. -->
+    
+    
+                  <h1>Humidity vs. Temperature Plot</h1>
+                  <img src="../assets/images/humidity_latitude.png">
+                <p>
+                    This plot shows the data from cities weather and location. The observable trend is that most citites have higher than 50% humidity. Latitude does not appear to impact this.
+                </p>
+              </div>
+              <div class="col-xs-12 col-sm-8 col-4" id="sidebar">
+                <h1>Visualizations</h1>
+                <a href="visualization1.html"><img src="../assets/images/cloudliness_latitude.png" width="200" height="200"></a><br>
+                <a href="visualization2.html"><img src="../assets/images/humidity_latitude.png" width="200" height="200"></a><br>
+                <a href="visualization3.html"><img src="../assets/images/temperature_latitude.png" width="200" height="200"></a><br>
+                <a href="visualization4.html"><img src="../assets/images/wind_speed_latitude.png" width="200" height="200"></a>
+              </div>
+              </div>
           </div>
     </body>
 </html>
