@@ -11,9 +11,6 @@
           #sidebar {
               margin: 50px;
               display: block;
-              position: fixed;
-              width:25%;
-              right:0
           }
           #explanation {
             background-color: white;
@@ -22,26 +19,26 @@
           .container {
             background-color: grey;
           }
+          @media (min-width: 1199.98px) {
+            #sidebar {
+              margin: 50px;
+              display: block;
+              position: fixed;
+              width:25%;
+              right:0
+          }
+          }
         </style>
       </head>
     <body>
         <nav class="navbar navbar-expand-lg bg-light">
             <div class="container-fluid">
-              <a class="navbar-brand" href="#">Web Homework</a>
+              <a class="navbar-brand" href="landing-page.html">Web Homework</a>
               <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
               </button>
-              <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                  <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="landing-page.html">Home</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="comparisons.html">Comparisons</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="data.html">Data</a>
-                  </li>
+              <div class="collapse navbar-collapse text-right" id="navbarSupportedContent">
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
                   <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                       Plots
@@ -53,19 +50,25 @@
                       <li><a class="dropdown-item" href="visualization4.html">Wind Speed and Latitude</a></li>
                     </ul>
                   </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="comparisons.html">Comparisons</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="data.html">Data</a>
+                  </li>
                 </ul>
               </div>
             </div>
           </nav>
           <div id="container">
             <div class="row">
-              <div class ="col-8" id="explanation">
+              <div class ="col-xs-12 col-sm-8 col-8" id="explanation">
                   <h1>Explanation</h1>
                 <p>
                     This project is an example template for HTML. It is coded with Bootstrap, a mobile responsive framework. It shows the graphs for data on cities and their weather. Each graph has a unique page that is accessible in the navigation bar under "Plots".
                 </p>
               </div>
-              <div class="col-4" id="sidebar">
+              <div class="col-xs-12 col-sm-8 col-4" id="sidebar">
                 <h1>Visualizations</h1>
                 <a href="visualization1.html"><img src="../assets/images/cloudliness_latitude.png" width="200" height="200"></a><br>
                 <a href="visualization2.html"><img src="../assets/images/humidity_latitude.png" width="200" height="200"></a><br>
